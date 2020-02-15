@@ -1,0 +1,131 @@
+:root {
+    --color-green: #4CAF50;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 768px;
+    /* height: 240px; */
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+.link--simple {
+    color: orange;
+}
+
+.link--simple:hover {
+    color: green;
+}
+
+/* HEADER */
+
+.header {
+    background: #424242;
+}
+
+.header--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header--menu {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu--item {
+}
+
+.menu--item .menu--link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FAFAFA;
+    display: inline-block;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+.menu--item:first-child .menu--link {
+    padding-left: 0;
+}
+
+.menu--item:last-child .menu--link {
+    padding-right: 0;
+}
+
+.menu--item:nth-child(odd) .menu--link {
+    color: #2196F3;
+}
+
+.menu--item:nth-child(even) .menu--link {
+    color: var(--color-green);
+}
+
+.menu--item:hover .menu--link {
+    color: #FFC107;
+}
+
+.logo--image {
+    width: 50px;
+    height: 50px;
+}
+
+.btn--call {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--color-green);
+    color: #E8F5E9;
+    border-radius: 100px;
+}
+
+.btn--call:hover {
+    color: #4CAF50;
+    background: #E8F5E9;
+}
+
+/* END HEADER */
+
+/* TRANSITION EXAMPLE */
+
+.box-container {
+    position: relative;
+    height: 240px;
+    border: 1px solid #673AB7;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #795548;
+    border-radius: 4px;
+    background: #607D8B;
+    transition: left 0.3s 1s, top 1s;
+    /* transition: 0.3s ease; */
+}
+
+.box-container:hover .box {
+    left: 100px;
+    top: 100px;
+}
+
+/* END TRANSITION EXAMPLE */
