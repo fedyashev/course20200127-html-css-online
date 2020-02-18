@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;    
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 576px;
+    height: 250px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #009;
+    border: 1px solid green;
+    display: flex;
+}
+
+.title__underline::before {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #090;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.title__underline::after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    background: #090;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.hover .link {
+
+}
+
+.hover .link:hover {
+    border: 4px solid #900;
+}
+
+/* HOVER-ARROW */
+
+.link--arrow {
+    position: relative;
+    border: 1px solid red;
+}
+
+.link--arrow::after {
+    content: url('../img/arrow-1.png');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 15px);
+    border: 1px solid red;
+}
+
+.link--arrow:hover::after {
+    left: calc(100% + 30px);
+}
+
+/* END HOVER-ARROW */
+
+/* HOVER-ARROW-TRUE */
+
+.link--arrow__true {
+    border: 1px solid blue;
+}
+
+.link--arrow__true span {
+    position: relative;
+    padding-right: 15px;
+    border: 1px solid green;
+    transition: 0.3s ease;
+}
+
+.link--arrow__true span::after {
+    content: url('../img/arrow-1.png');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    border: 1px solid red;
+}
+
+.link--arrow__true:hover span {
+    padding-right: 30px;
+}
+
+/* END HOVER-ARROW-TRUE */
+
+/* CENTER-FLEX */
+
+.box__big {
+    width: 200px;
+    height: 200px;
+    background: #212121;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+.box__little {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+}
+
+.center-flex .box__big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* END CENTER-FLEX */
+
+/* CENTER-POSITION */
+
+.center-position .box__big {
+    position: relative;
+}
+
+.center-position .box__little {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* END CENTER-POSITION */
