@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.container {
+    width: 768px;
+    margin: 0 auto;
+}
+
+.first-form input[type="text"],
+.first-form input[type="email"],
+.first-form input[type="tel"],
+.first-form input[type="password"],
+.first-form textarea {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    padding: 5px 5px 5px 15px;
+    outline: none;
+    border: 1px solid lightcoral;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.first-form input[type="text"]::placeholder,
+.first-form input[type="email"]::placeholder,
+.first-form input[type="tel"]::placeholder,
+.first-form input[type="password"]::placeholder,
+.first-form textarea::placeholder {
+    position: relative;
+    top: -5px;
+    font-size: 16px;
+    font-weight: 100;
+    color: #090;
+}
+
