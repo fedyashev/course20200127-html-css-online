@@ -1,0 +1,50 @@
+
+:root {
+    --ff-pop: font-family: 'Poppins';
+    --ff-nun: font-family: 'Nunito';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-pop);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #090;
+    /* -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%); */
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: #900;
+    -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
