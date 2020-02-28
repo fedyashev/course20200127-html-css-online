@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 720px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 25%;
+    height: 75px;
+    background: #212121;
+    border-radius: 4px;
+    border: 1px solid #090;
+}
+
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+@media (max-width: 1199.98px) {
+    .box {
+        background: #909;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .box {
+        background: #990;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .box {
+        flex: 50%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .box {
+        flex: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+    .box {
+        background: #099;
+    }
+}
+
+
+
+
+/* HEADER */
+
+.header {
+    padding: 30px 0;
+    background: #212121;
+}
+
+.logo {
+    width: 100px;
+    color: orange;
+    font-weight: 900;
+}
+
+.header--menu-button {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: 1px solid orange;
+    border-radius: 4px;
+    padding: 4px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header--menu-button span {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background: orange;
+}
+
+.navigation {
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu--link {
+    text-decoration: none;
+    color: orange;
+}
+
+@media (max-width: 991.98px) {
+    .header--menu-button {
+        display: flex;
+    }
+
+    .navigation {
+        display: none;
+    }
+}
+
+/* END HEADER */
